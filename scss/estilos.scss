@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&family=Roboto:wght@100&display=swap');
+@import "_menu.css";
+$colorBlanco: #fff;
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    animation: fanimado 10s infinite;
+}
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/*====Agregando estilos para el footer====*/
+footer {
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url(../assets/background-footer.svg);
+    background-size: cover;
+    background-color: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+}
+#estiloFooter {
+    font-size: 2rem;
+    color:rgb(35, 71, 249);
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+/*======SLIDE DE IMAGENES======*/
+.carousel-inner{
+    max-height: 39rem;
+
+}
+/*======Mapa======*/
+.mapa{
+    background: url(../assets/mapa.jpg);
+    width: 100%;
+    height: 400px;
+}
+#local {
+    background-color: #ebf0f0f4;
+    padding-bottom: 300px;
+    display: flex;
+    justify-content: center;
+    padding: initial;
+}
+.wrapper{
+    width: 50%;
+    margin-left: 100px;
+    padding-top: 150px;
+}
+#contenedor-formulario {
+    background: #eae9ef;
+    border-radius: 5px;
+    max-width: 500px;
+}
+#titulo-formulario{
+    color: #160598;
+}
+/*======hover en el boton de suscribirse======*/
+.btnSuscribete {
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin: 0,5rem;
+    color: rgb(23, 91, 237);
+    border: 2px solid;
+    background:linear-gradient(to right, transparent 50%, rgb(237, 230, 23) 50%) no-repeat left / 200%;
+    transition: background-position 0.3s ease;
+    .btnSuscribete:hover {
+        background-position: right; 
+        color: rgb(5, 12, 220); 
+        border: 2px solid rgb(237, 230, 23);
+    }
+}
+.btnComprar {
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin: 0,5rem;
+    color: rgb(23, 91, 237);
+    border: 2px solid;
+    background:linear-gradient(to right, transparent 50%, rgb(237, 230, 23) 50%) no-repeat left / 200%;
+    transition: background-position 0.3s ease;
+    .btnComprar:hover {
+        background-position: right; 
+        color: rgb(5, 12, 220); 
+        border: 2px solid rgb(237, 230, 23);
+    }
+}
+/*======animacion en los titulos GRADIENT BACKROUND======*/
+#estiloSeccion {
+    width: 100%;
+    color: $colorBlanco;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    position: relative;
+    background-size: 400% 400%;
+}
+#estiloTitulo {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 3px solid $colorBlanco;
+    position:relative; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 10rem;
+}
+/*======MEDIA QUERIES PANTALLA PEQUEÑA======*/
+#intro, #nosotros {
+    width: 90% !important;
+    .servicio-fila{
+        width: 100% !important;
+        text-align: center;
+    }
+    #nosotros {
+        text-align: 20px;
+    }
+}
+/*======MEDIA QUERIES PANTALLA mediana======*/
+@media (max-with:1200px){
+    #local {
+        flex-wrap: wrap;
+        padding-top: 30px;
+
+    }
+    .wrapper {
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;
+    }
+}
+//Aplicando mixin para el desafio
+@mixin textos($color, $size) {
+    color: $color;
+    padding: 5px;
+    font-size: $size;
+    text-align: center;
+}
+p{
+    @include textos(rgb(224, 13, 91),1.5rem);
+}
+h5{
+    @include textos(rgb(127, 10, 190),1rem );
+}
+//Aplicando extend para el desafio
+.button{
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+btnSuscribete{
+    @extend .button;
+    background: yellow;
+    border: 3px solid;
+}
+//Aplicando mapas para el desafio
+$headings: (
+    h2: blue,
+    h5: red,
+    h1: yellow
+);
+$h2: map-get($headings ,h2);

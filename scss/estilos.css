@@ -1,0 +1,204 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&family=Roboto:wght@100&display=swap");
+@import "_menu.css";
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  -webkit-animation: fanimado 10s infinite;
+          animation: fanimado 10s infinite;
+}
+
+@-webkit-keyframes fanimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fanimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*====Agregando estilos para el footer====*/
+footer {
+  width: 100%;
+  padding: 50px 0px;
+  background-image: url(../assets/background-footer.svg);
+  background-size: cover;
+  background-color: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+}
+
+#estiloFooter {
+  font-size: 2rem;
+  color: rgb(35, 71, 249);
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.container__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+/*======SLIDE DE IMAGENES======*/
+.carousel-inner {
+  max-height: 39rem;
+}
+
+/*======Mapa======*/
+.mapa {
+  background: url(../assets/mapa.jpg);
+  width: 100%;
+  height: 400px;
+}
+
+#local {
+  background-color: rgba(235, 240, 240, 0.9568627451);
+  padding-bottom: 300px;
+  display: flex;
+  justify-content: center;
+  padding: initial;
+}
+
+.wrapper {
+  width: 50%;
+  margin-left: 100px;
+  padding-top: 150px;
+}
+
+#contenedor-formulario {
+  background: #eae9ef;
+  border-radius: 5px;
+  max-width: 500px;
+}
+
+#titulo-formulario {
+  color: #160598;
+}
+
+/*======hover en el boton de suscribirse======*/
+.btnSuscribete {
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  margin: 0, 5rem;
+  color: rgb(23, 91, 237);
+  border: 2px solid;
+  background: linear-gradient(to right, transparent 50%, rgb(237, 230, 23) 50%) no-repeat left/200%;
+  transition: background-position 0.3s ease;
+}
+.btnSuscribete .btnSuscribete:hover {
+  background-position: right;
+  color: rgb(5, 12, 220);
+  border: 2px solid rgb(237, 230, 23);
+}
+
+.btnComprar {
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  margin: 0, 5rem;
+  color: rgb(23, 91, 237);
+  border: 2px solid;
+  background: linear-gradient(to right, transparent 50%, rgb(237, 230, 23) 50%) no-repeat left/200%;
+  transition: background-position 0.3s ease;
+}
+.btnComprar .btnComprar:hover {
+  background-position: right;
+  color: rgb(5, 12, 220);
+  border: 2px solid rgb(237, 230, 23);
+}
+
+/*======animacion en los titulos GRADIENT BACKROUND======*/
+#estiloSeccion {
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  position: relative;
+  background-size: 400% 400%;
+}
+
+#estiloTitulo {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 3px solid #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem 10rem;
+}
+
+/*======MEDIA QUERIES PANTALLA PEQUEÑA======*/
+#intro, #nosotros {
+  width: 90% !important;
+}
+#intro .servicio-fila, #nosotros .servicio-fila {
+  width: 100% !important;
+  text-align: center;
+}
+#intro #nosotros, #nosotros #nosotros {
+  text-align: 20px;
+}
+
+/*======MEDIA QUERIES PANTALLA mediana======*/
+@media (max-with: 1200px) {
+  #local {
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+  }
+}
+p {
+  color: rgb(224, 13, 91);
+  padding: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h5 {
+  color: rgb(127, 10, 190);
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.button, btnSuscribete {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+btnSuscribete {
+  background: yellow;
+  border: 3px solid;
+}/*# sourceMappingURL=estilos.css.map */
