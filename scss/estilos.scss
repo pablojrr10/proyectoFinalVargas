@@ -157,10 +157,13 @@ footer {
     text-align: center;
 }
 p{
-    @include textos(rgb(224, 13, 91),1.5rem);
+    @include textos(rgb(244, 42, 241),1.5rem);
 }
 h5{
-    @include textos(rgb(127, 10, 190),1rem );
+    @include textos(rgb(0, 24, 119),2rem );
+}
+h1{
+    @include textos(rgb(210, 212, 223),2rem );
 }
 //Aplicando extend para el desafio
 .button{
